@@ -1,7 +1,6 @@
 # JuliaWordsUtils
 
 [![Build Status](https://travis-ci.org/jonathanBieler/JuliaWordsUtils.jl.svg?branch=master)](https://travis-ci.org/jonathanBieler/JuliaWordsUtils.jl)
-
 [![codecov.io](http://codecov.io/github/jonathanBieler/JuliaWordsUtils.jl/coverage.svg?branch=master)](http://codecov.io/github/jonathanBieler/JuliaWordsUtils.jl?branch=master)
 
 A couple of utility functions to select Julia words from in a String.
