@@ -64,6 +64,9 @@ module JuliaWordsUtils
     function extend_word(pos::Integer,txt::String,stop_at_dot=true)
         ca = CharArray(txt)
 
+        pos > length(ca) && return "",pos,pos
+        pos < 1 && return "",pos,pos
+
         is_word_boundary(ca[pos],stop_at_dot) && return ca[pos:pos], pos, pos
 
         i = extend_word_backward(pos,ca,stop_at_dot)
