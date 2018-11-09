@@ -1,17 +1,17 @@
 module JuliaWordsUtils
 
-    import Base: length, getindex, endof
+    import Base: length, getindex, endof, lastindex, firstindex
 
     export select_word_backward, get_word_backward, extend_word
 
     """
         CharArray is a Vector of Char with a few convenience methods.
     """
-    immutable CharArray
+    struct CharArray
         c::Vector{Char}
         function CharArray(s::AbstractString,l::Integer)
             l > length(s) && error("Offset larger than string length.")
-            ca = Vector{Char}(0)
+            ca = Char[]
 
             for (count,c) in enumerate(s)
                 push!(ca,c)
@@ -26,6 +26,8 @@ module JuliaWordsUtils
     endof(s::CharArray) = length(s)
     getindex(s::CharArray,i::Integer) = s.c[i]
     getindex(s::CharArray,i::UnitRange) = string(s.c[i]...)
+    lastindex(s::CharArray) = lastindex(s.c)
+    firstindex(s::CharArray) = firstindex(s.c)
 
     # maybe not the most efficient way of doing this.
     global const word_boundaries = [
