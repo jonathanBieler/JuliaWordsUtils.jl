@@ -1,6 +1,6 @@
 module JuliaWordsUtils
 
-    import Base: length, getindex, endof, lastindex, firstindex
+    import Base: length, getindex, lastindex, firstindex
 
     export select_word_backward, get_word_backward, extend_word
 
@@ -23,7 +23,6 @@ module JuliaWordsUtils
     end
 
     length(s::CharArray) = length(s.c)
-    endof(s::CharArray) = length(s)
     getindex(s::CharArray,i::Integer) = s.c[i]
     getindex(s::CharArray,i::UnitRange) = string(s.c[i]...)
     lastindex(s::CharArray) = lastindex(s.c)
