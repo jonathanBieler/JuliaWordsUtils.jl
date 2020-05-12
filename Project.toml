@@ -1,0 +1,13 @@
+name = "JuliaWordsUtils"
+uuid = "9e42fe60-4c8f-4de3-8815-836141356991"
+authors = ["Jonathan Bieler <jonathan.bieler@alumni.epfl.ch>"]
+version = "0.1.0"
+
+[compat]
+julia = "1.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
